@@ -1,5 +1,14 @@
+import pygame
+
 SCREEN_WIDTH, SCREEN_HEIGHT = 650, 650
 FPS = 60
+
+square_size = 30
+width_square_size = 10
+height_square_size = 20
+
+pos_x = 6
+pos_y = 6
 
 COLORS = {
     'I': (0, 240, 240),    # Голубой (циан)
@@ -11,8 +20,6 @@ COLORS = {
     'Z': (240, 0, 0)       # Красный
 }
 
-matrix = [
-    [12, 123, 3213],
-    [123, 345, 3454],
-    [234, 25, 2234]
-]
+blocks = {
+    'I': [pygame.Rect(square_size * i, square_size * 2, square_size, square_size) for i in range(3, 7)]
+}
